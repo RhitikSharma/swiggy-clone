@@ -1,0 +1,38 @@
+.hero-section {
+    background-image: url('https://images.pexels.com/photos/1291128/pexels-photo-1291128.jpeg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    height: 50vh; /* Make the hero section smaller */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .hero-content h1 {
+    font-size: 2rem; /* Smaller font size */
+    margin-bottom: 10px;
+  }
+  
+  .hero-content p {
+    font-size: 1rem; /* Smaller font size */
+    margin-bottom: 20px;
+  }
+  
+  .order-now-btn {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .order-now-btn:hover {
+    background-color: #ff9a8b;
+  }
+  

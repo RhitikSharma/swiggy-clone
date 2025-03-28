@@ -1,0 +1,849 @@
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;  /* Trendy font choice */
+  background: linear-gradient(135deg, #ff7a8c, #fdc0c7); /* Gen Z vibrant gradient */
+  color: #333;
+  transition: background 0.5s ease;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between; /* Aligns the items to both ends */
+  align-items: center;
+  padding: 20px 40px;
+  background: linear-gradient(135deg, #ff7a8c, #ff4d4d); /* Gradient background */
+  border-bottom: 3px solid #ff7a8c; /* Accent border */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+/* On hover: subtle shadow effect */
+.header:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo Container */
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Align logo to the left */
+  background: transparent;  /* Remove any background around the logo */
+}
+
+/* Logo */
+.logo {
+  width: 140px;
+  height: auto;
+  transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
+  filter: brightness(1) contrast(0.9); /* Adjust brightness to blend with the background */
+  opacity: 1;  /* Ensure full opacity */
+  border-radius: 8px;  /* Rounded corners to blend with the header */
+  background: transparent;  /* Make sure there's no white background */
+  object-fit: contain;  /* Keep the logo aspect ratio intact */
+}
+
+/* Hover Effect on Logo */
+.logo:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2) contrast(1); /* On hover, increase brightness */
+  opacity: 1; /* Full opacity on hover */
+}
+
+
+
+.slogan {
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  margin-left: 20px;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+/* Nav and Social Media Container */
+.nav-social-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Align all nav items and social media links to the right */
+  gap: 15px;
+}
+
+.nav-items ul {
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-items ul li {
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.nav-items ul li:hover {
+  transform: translateY(-5px);
+  color: #ffffff;
+  font-weight: 700;
+  text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.4);
+  letter-spacing: 1px;
+}
+
+/* Login button */
+.login-btn {
+  background-color: #ec9fa9;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 16px;
+  border-radius: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #f36969;
+  transform: scale(1.05);
+}
+
+/* Social Media Icons */
+.social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icon {
+  font-size: 24px;
+  color: #fff;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #ff7a8c;
+  transform: scale(1.2);
+}
+
+/* Body Styling */
+.body {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.body h1 {
+  font-size: 3.8rem;
+  color: #ffffff;
+  font-weight: 900;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.body h1:hover {
+  transform: scale(1.05);
+  color: #fad1d5;
+}
+
+.body p {
+  font-size: 1.6rem;
+  color: #ffffff;
+  margin-top: 20px;
+  letter-spacing: 0.5px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .nav-items ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .logo {
+    width: 120px;
+  }
+
+  .login-btn {
+    margin-top: 20px;
+    padding: 10px 25px;
+  }
+
+  .body h1 {
+    font-size: 2.5rem;
+  }
+
+  .body p {
+    font-size: 1.2rem;
+  }
+}
+
+/* Footer */
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 30px 20px;
+  margin-top: 40px;
+  border-top: 5px solid #ff7a8c;
+  display: flex;
+  flex-direction: column; /* Ensures stacking of text and social links */
+  align-items: center; /* Center the content */
+}
+
+/* Styling for social links */
+.footer .social-links {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center; /* Ensures the social links are centered */
+}
+
+.footer .social-links a {
+  color: #ff7a8c;
+  font-size: 20px;
+  margin: 0 15px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer .social-links a:hover {
+  transform: scale(1.2);
+  color: white;
+}
+
+
+/* Search */
+.search {
+  margin: 30px auto;
+  padding: 20px;
+  max-width: 600px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.9);  /* Slight background blur */
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the button below the input */
+  box-sizing: border-box; /* Ensures padding doesn't mess with layout */
+}
+
+.search input {
+  width: 100%;  /* Ensure the input takes up full width of container */
+  padding: 15px 20px;
+  font-size: 18px;
+  border: 2px solid #ff7a8c;
+  border-radius: 10px;
+  outline: none;
+  background-color: #fce5e5;
+  color: #333;
+  box-sizing: border-box; /* Prevents padding from expanding the width */
+  margin-bottom: 15px;  /* Adds space between input and button */
+  transition: border 0.3s ease, background-color 0.3s ease;
+}
+
+.search input:focus {
+  border-color: #ff4d4d;
+  background-color: #ffffff;
+}
+
+/* Smaller Search Button */
+.search button {
+  padding: 10px 20px;  /* Smaller padding for the button */
+  font-size: 16px;  /* Smaller font size */
+  background-color: #ff7a8c;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  width: auto;  /* Make the button size based on content */
+  margin-top: 10px;  /* Adds some space between the input and the button */
+}
+
+.search button:hover {
+  background-color: #ff4d4d;
+  transform: translateY(-3px);
+}
+
+
+
+
+/* Restaurant Cards */
+.res-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 30px;
+}
+
+.res-card {
+  width: 280px;
+  padding: 20px;
+  border-radius: 15px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.res-card:hover {
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+  transform: translateY(-10px);
+}
+
+.res-logo {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.res-logo:hover {
+  transform: scale(1.05);
+}
+
+/* Shimmer Effect */
+.shimmer-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.shimmer-cards {
+  width: 250px;
+  height: 180px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  border-radius: 8px;
+  animation: shimmer 1.5s infinite linear;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Login Form */
+.login-form {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  max-width: 380px;
+  margin: 60px auto;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 15px;
+  margin: 12px 0;
+  border: 2px solid #ff7a8c;
+  border-radius: 12px;
+  font-size: 18px;
+  transition: border 0.3s ease;
+}
+
+.login-form input:focus {
+  border-color: #ff4d4d;
+}
+
+.login-form button {
+  width: 100%;
+  padding: 15px;
+  background-color: #ff7a8c;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.login-form button:hover {
+  background-color: #ff4d4d;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-items ul {
+    flex-direction: column;
+  }
+
+  .nav-items ul li {
+    margin: 12px 0;
+  }
+
+  .body h1 {
+    font-size: 2.8rem;
+  }
+
+  .body p {
+    font-size: 1.2rem;
+  }
+
+  .res-card {
+    width: 90%;
+    max-width: 320px;
+  }
+
+  .search input, .search button {
+    font-size: 16px;
+  }
+}
+/* Filter Container */
+.filter-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin: 20px 0;
+  padding: 30px;
+  background: linear-gradient(45deg, #ff7a8c, #fd5c63);
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Filters Section */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.filters select, .filters label {
+  padding: 15px 20px;
+  font-size: 1rem;
+  background-color: #ffffff;
+  border-radius: 50px;
+  border: 2px solid #ff7a8c;
+  outline: none;
+  color: #333;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filters select:hover, .filters label:hover {
+  background-color: #ffe1e6;
+  transform: translateY(-2px);
+}
+
+.filters select:focus, .filters label:focus {
+  border-color: #fd5c63;
+  box-shadow: 0 0 10px rgba(253, 92, 99, 0.4);
+}
+
+.filters label input {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+/* Apply Filters Button */
+.filters button {
+  padding: 12px 30px;
+  background-color: #fd5c63;
+  color: white;
+  border-radius: 50px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filters button:hover {
+  background-color: #ff7a8c;
+  transform: translateY(-3px);
+}
+/* Restaurant List */
+.restaurant-list {
+  margin-top: 30px;
+}
+
+.restaurant-item {
+  background-color: #fff;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.restaurant-item h3 {
+  font-size: 24px;
+  color: #333;
+  font-weight: 600;
+}
+
+.restaurant-item p {
+  font-size: 16px;
+  color: #666;
+}
+/* Add to your existing CSS */
+.login-container {
+  width: 300px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f4f4f4;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-container input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login-container button {
+  width: 100%;
+  padding: 10px;
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-container button:hover {
+  background-color: #2ecc71;
+}
+
+.toggle-form {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.toggle-form span {
+  color: #27ae60;
+  cursor: pointer;
+}
+
+.toggle-form span:hover {
+  text-decoration: underline;
+}
+/* About Page Styles */
+.about-page {
+  font-family: 'Arial', sans-serif;
+  padding: 50px 20px;
+  background: linear-gradient(135deg, #ff7a8c, #fdc0c7); /* Subtle gradient */
+  color: #fff;
+}
+
+.about-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.about-header h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.about-header p {
+  font-size: 1.3rem;
+  color: #fff;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Section Title */
+.about-section h2 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #ff4d4d;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+/* Styling for About Section */
+.about-section p {
+  font-size: 1.1rem;
+  color: #fff;
+  line-height: 1.8;
+  max-width: 900px;
+  margin: 0 auto 40px;
+}
+
+/* Values List */
+.values-list {
+  list-style-type: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the list items horizontally */
+  justify-content: center; /* Aligns them vertically if needed */
+  max-width: 600px; /* Restricts the width for a nice, clean look */
+  margin: 0 auto; /* Centers the list container itself */
+}
+
+.values-list li {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  line-height: 1.8;
+  text-align: center; /* Ensures text within the list items is centered */
+}
+
+
+/* Team Section */
+.team-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.team-member {
+  background-color: #fff;
+  color: #333;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  width: 250px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member img {
+  width: 100%;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.team-member:hover img {
+  transform: scale(1.1);
+}
+
+.team-member h3 {
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+  color: #ff4d4d;
+}
+
+.team-member p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Footer - Already in global Footer component */
+.about-footer {
+  background-color: #333;
+  color: #fff;
+  padding: 30px 20px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.about-footer p {
+  font-size: 1.1rem;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .about-header h1 {
+    font-size: 2.8rem;
+  }
+
+  .about-header p {
+    font-size: 1.1rem;
+  }
+
+  .team-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .team-member {
+    width: 90%;
+    margin-bottom: 30px;
+  }
+
+  .about-section p {
+    font-size: 1rem;
+  }
+}
+/* Global Cart Page Styles */
+.cart-page {
+  font-family: 'Roboto', sans-serif;
+  padding: 20px;
+  background-color: #f0f4f8; /* Light background for modern look */
+  color: #333; /* Dark text for readability */
+  border-radius: 10px;
+  max-width: 900px;
+  margin: 40px auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.cart-page h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: 600;
+}
+
+.cart-item {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Light shadow for each item */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: transform 0.3s ease;
+}
+
+.cart-item:hover {
+  transform: translateY(-5px); /* Hover effect for items */
+}
+
+.cart-item h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #444;
+  margin: 0 0 5px 0;
+}
+
+.cart-item p {
+  color: #777;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.item-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.item-actions button {
+  background-color: #ff7f50; /* Vibrant coral orange */
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.item-actions button:hover {
+  background-color: #ff5733; /* Slightly darker on hover */
+  transform: scale(1.05); /* Zoom effect */
+}
+
+.item-actions span {
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: 600;
+}
+
+.total-price {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: right;
+  margin-top: 20px;
+  color: #ff7f50; /* Vibrant color for total price */
+}
+
+.checkout-btn,
+.clear-cart-btn {
+  width: 100%;
+  background-color: #4caf50; /* Green for checkout button */
+  color: #fff;
+  border: none;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.checkout-btn:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+.clear-cart-btn {
+  background-color: #ff1744; /* Red for "clear cart" */
+  margin-top: 10px;
+}
+
+.clear-cart-btn:hover {
+  background-color: #d50032; /* Darker red on hover */
+}
+
+/* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+  .cart-page {
+    padding: 15px;
+    margin: 20px;
+  }
+
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .item-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .item-actions button {
+    width: 100%;
+  }
+
+  .checkout-btn,
+  .clear-cart-btn {
+    width: 100%;
+  }
+}
+

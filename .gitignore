@@ -1,0 +1,9 @@
+/node_modules
+/build
+.env
+.parcel-cache/
+dist
+.parcel-cache/
+.parcel-cache/
+.parcel-cache/
+.parcel-cache/

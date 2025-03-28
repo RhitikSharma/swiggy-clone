@@ -1,0 +1,18 @@
+Two type export 
+
+-Default Export/Import
+
+export default component;
+import component from  "path"
+
+-Named Export/Import
+
+export const Component 
+import {compoent} from "path"
+
+#React Hooks
+
+-useState
+
+
+when state is changes  react is rerendering the component     
